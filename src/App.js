@@ -25,7 +25,7 @@ export default function App() {
     formData.append('apk', file);
 
     try {
-      const response = await axios.post('http://localhost:3001/analyze', formData, {
+      const response = await axios.post('https://android-malware.onrender.com/analyze', formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       setAnalysis(response.data);
